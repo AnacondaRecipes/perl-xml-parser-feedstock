@@ -8,6 +8,8 @@ source:
   fn: XML-Parser-{{ version }}.tar.gz
   url: https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-{{ version }}.tar.gz
   sha256: 5310ea5c8c707f387589bba8934ab9112463a452f828adf2755792d968b9ac7e
+  patches:
+    - XML-Parser-2.44_01-Fix-a-buffer-overwrite-in-parse_stream.patch
 
 build:
   number: 1003
@@ -19,6 +21,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
+    - patch  # [not win]
   host:
     - perl
     - expat
@@ -51,3 +54,4 @@ extra:
   recipe-maintainers:
     - kynan
     - scopatz
+    - katietz
