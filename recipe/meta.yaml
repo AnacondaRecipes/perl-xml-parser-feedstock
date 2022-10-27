@@ -11,6 +11,7 @@ source:
 
 build:
   number: 1003
+  # trigger: 0
   skip: True  # [win]
 
 requirements:
@@ -42,6 +43,8 @@ about:
   license_family: OTHER
   license_file: LICENSE
   summary: A perl module for parsing XML documents
+  doc_url: https://metacpan.org/pod/XML::Parser
+  dev_url: https://metacpan.org/pod/XML::Parser
 
 extra:
   recipe-maintainers:
