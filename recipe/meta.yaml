@@ -26,11 +26,9 @@ requirements:
   host:
     - perl
     - expat
-    - libnsl
   run:
     - perl
     - expat
-    - libnsl
 
 test:
   imports:
