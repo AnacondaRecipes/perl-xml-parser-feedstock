@@ -3,8 +3,9 @@
 set -exou
 
 if [[ $(uname) == "Linux" ]]; then
-    # ln -s ${CXX} g++ || true
-    ln -s ${CC} gcc || true
+    echo "adding gcc/gxx symlinks"
+    ln -s ${GXX} ./g++
+    ln -s ${GCC} ./gcc
 
     export PATH=$PWD:$PATH
 fi
