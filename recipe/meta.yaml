@@ -21,7 +21,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
-    - patch  # [not win]
+    - patch     # [not win]
+    - m2-patch  # [win]
     - sed
   host:
     - perl
