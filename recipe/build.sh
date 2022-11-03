@@ -1,9 +1,8 @@
 #!/bin/bash
 i
 if [[ $(uname) == "Linux" ]]; then
-    ln -s ${GXX} g++ || true
-    ln -s ${GCC} gcc || true
-    ln -s ${USED_BUILD_PREFIX}/bin/${HOST}-gcc-ar gcc-ar || true
+    ln -s ${CXX} g++ || true
+    ln -s ${CC} gcc || true
 
     export LD=${GXX}
     export CC=${GCC}
