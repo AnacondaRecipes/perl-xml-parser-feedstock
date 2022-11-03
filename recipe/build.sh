@@ -1,5 +1,7 @@
 #!/bin/bash
-i
+
+set -exou
+
 if [[ $(uname) == "Linux" ]]; then
     # ln -s ${CXX} g++ || true
     ln -s ${CC} gcc || true
