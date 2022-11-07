@@ -1,10 +1,14 @@
 #!/bin/bash
 
+set -x
+
+cd "$SRC_DIR"
+
 echo "adding cc/cxx symlinks ${CC} / ${CXX}"
 ln -s ${CXX} ./g++
 ln -s ${CC} ./gcc
 
-export PATH=$PWD:$PATH
+export PATH=$PWD:$PREFIX/bin:$PATH
 
 echo "Invoking ${PREFIX}/bin/perl ..."
 ls -la ${PREFIX}/bin
