@@ -45,8 +45,8 @@ about:
   home: https://metacpan.org/pod/XML::Parser
   # According to http://dev.perl.org/licenses/ Perl5 is licensed either under
   # GPL v1 or later or the Artistic License
-  license: Perl 5
-  license_family: OTHER
+  license: Artistic-1.0-Perl
+  license_family: Other
   license_file: LICENSE
   summary: A perl module for parsing XML documents
   doc_url: https://metacpan.org/pod/XML::Parser
