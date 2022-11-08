@@ -18,13 +18,12 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
     - make
     - patch     # [not win]
     - m2-patch  # [win]
     - sed
   host:
+    - {{ compiler('c') }}  # [unix]
     - perl
     - expat
   run:
