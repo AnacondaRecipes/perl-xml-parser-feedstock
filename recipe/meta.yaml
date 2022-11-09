@@ -12,8 +12,7 @@ source:
     - XML-Parser-2.44_01-Fix-a-buffer-overwrite-in-parse_stream.patch
 
 build:
-  number: 1003
-  # trigger: 0
+  number: 0
   skip: True  # [win]
   missing_dso_whitelist:            # [linux]
     - /lib64/libc.so.6              # [linux]
@@ -51,6 +50,10 @@ about:
   license_family: Other
   license_file: LICENSE
   summary: A perl module for parsing XML documents
+  description: |
+    This module provides ways to parse XML documents. It is built on top
+    of XML::Parser::Expat, which is a lower level interface to James
+    Clark's expat library.
   doc_url: https://metacpan.org/pod/XML::Parser
   dev_url: https://metacpan.org/pod/XML::Parser
 
