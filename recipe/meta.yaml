@@ -21,6 +21,7 @@ requirements:
   host:
     - perl {{ perl }}
     - perl-file-sharedir-install 0.14
+    - perl-file-sharedir 1.118
     - expat {{ expat }}
   run:
     - perl
