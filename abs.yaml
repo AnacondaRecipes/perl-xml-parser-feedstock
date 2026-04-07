@@ -1,0 +1,8 @@
+channels:
+  - https://staging.continuum.io/pbp/fs/perl-extutils-makemaker-feedstock/pr1/db9dc4d
+  - https://staging.continuum.io/pbp/fs/perl-class-inspector-feedstock/pr1/059546b
+  - https://staging.continuum.io/pbp/fs/perl-carp-feedstock/pr1/b130307
+  - https://staging.continuum.io/pbp/fs/perl-exporter-feedstock/pr1/a849c5c
+  - https://staging.continuum.io/pbp/fs/perl-file-path-feedstock/pr1/4f3b23f
+  - https://staging.continuum.io/pbp/fs/perl-file-sharedir-install-feedstock/pr1/11027ee
+  - https://staging.continuum.io/pbp/fs/perl-file-sharedir-feedstock/pr1/8f8ffac
