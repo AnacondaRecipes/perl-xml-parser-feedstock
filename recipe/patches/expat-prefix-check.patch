@@ -1,0 +1,25 @@
+Skip Devel::CheckLib when expat headers/libs are already under EXPATINCPATH / EXPATLIBPATH (conda host).
+
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -81,8 +81,19 @@
+     }
+ }
+ 
++my $have_expat_in_prefix =
++      $expat_incpath
++    && $expat_libpath
++    && -f File::Spec->catfile( $expat_incpath, 'expat.h' )
++    && (
++           scalar( glob( File::Spec->catfile( $expat_libpath, 'libexpat.so*' ) ) )
++        || scalar( glob( File::Spec->catfile( $expat_libpath, 'libexpat*.dylib' ) ) )
++        || -f File::Spec->catfile( $expat_libpath, 'libexpat.a' )
++    );
++
+ unless (
+-    check_lib(    # fill in what you prompted the user for here
++    $have_expat_in_prefix
++    || check_lib(
+         lib     => [qw(expat)],
+         header  => ['expat.h'],
+         incpath => $expat_incpath,

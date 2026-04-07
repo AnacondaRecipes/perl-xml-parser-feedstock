@@ -9,10 +9,7 @@ source:
   url: https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-{{ version }}.tar.gz
   sha256: a78bfcd3834fde7411acee2f5fcd74deeecfbaa8cee86f16c33c42dde2fd8fff
   patches:
-    # Makefile.PL: if expat.h and libexpat exist under EXPATINCPATH/EXPATLIBPATH, skip the
-    # bundled Devel::CheckLib probe (often breaks under conda-build). Else check_lib with
-    # not_execute plus CFLAGS/CPPFLAGS/LDFLAGS from the environment.
-    - patches/makefile-pl-not-execute.patch
+    - patches/expat-prefix-check.patch
 
 build:
   number: 0
